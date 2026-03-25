@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "daisyui";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 @source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
@@ -17,8 +18,14 @@
     body {
         @apply bg-gray-50 text-gray-900;
     }
+}
 
+@layer components {
     .title {
-        @apply text-4xl font-bold;
+        @apply text-4xl font-bold text-blue-600 tracking-tight;
+    }
+
+    .nav-link {
+        @apply px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors duration-200;
     }
 }
